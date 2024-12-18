@@ -22,12 +22,14 @@
             100% {background-position: 0% 50%;}
         }
         .poster-container {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
             width: 80%;
+            max-width: 1200px;
         }
         .poster-container img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             border: 2px solid #ccc;
             border-radius: 10px;
