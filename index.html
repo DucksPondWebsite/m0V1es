@@ -3,85 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Posters</title>
+    <title>Duck's Films GitHub Port</title>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(-45deg, #1a0000, #4b0000, #1a0000, #4b0000);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
             font-family: Arial, sans-serif;
-            color: yellow;
-        }
-        @keyframes gradient {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
+            background-color: black;
+            color: white;
+            text-align: center;
         }
         h1 {
             font-family: 'Pacifico', cursive;
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            position: relative;
-            transition: transform 0.1s ease;
+            font-size: 3em;
+            color: yellow;
+            margin-bottom: 40px;
         }
-        h1:hover {
-            transform: translate3d(var(--x, 0), var(--y, 0), 0);
-        }
-        .poster-container {
+        .movie-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             width: 80%;
-            max-width: 1200px;
+            margin: auto;
         }
-        .poster-container img {
+        .movie-item {
+            position: relative;
+        }
+        .movie-item img {
             width: 100%;
             height: auto;
-            border: 2px solid #ccc;
             border-radius: 10px;
-            position: relative;
             cursor: pointer;
         }
-        .poster-container img:hover::after {
-            content: attr(alt);
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.7);
+        .movie-item a {
+            text-decoration: none;
             color: white;
+        }
+        .movie-item:hover .movie-title {
+            display: block;
+        }
+        .movie-title {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
             padding: 5px 10px;
             border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1 id="hoverText">Ducks Films Github Port</h1>
-    <div class="poster-container">
-        <a href="fnaf_desc.html"><img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Five_Nights_At_Freddy%27s_poster.jpeg" alt="Fnaf Movie"></a>
-        <a href="free_guy_desc.html"><img src="https://m.media-amazon.com/images/M/MV5BN2I0MGMxYjUtZTZiMS00MzMxLTkzNWYtMDUyZmUwY2ViYTljXkEyXkFqcGc@._V1_.jpg" alt="Free Guy"></a>
-        <a href="rat_desc.html"><img src="https://lumiere-a.akamaihd.net/v1/images/p_ratatouille_19736_0814231f.jpeg" alt="Ratatouille"></a>
-        <a href="How_To_Train_Your_Dragon.html"><img src="https://musicart.xboxlive.com/7/21dd0700-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080" alt="How To Train Your Dragon"></a>
+    <h1>Duck's Films GitHub Port</h1>
+    <div class="movie-grid">
+        <div class="movie-item">
+            <a href="fnaf_desc.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Five_Nights_At_Freddy%27s_poster.jpeg" alt="Fnaf Movie">
+                <div class="movie-title">Fnaf Movie</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="free_guy_desc.html">
+                <img src="https://m.media-amazon.com/images/M/MV5BN2I0MGMxYjUtZTZiMS00MzMxLTkzNWYtMDUyZmUwY2ViYTljXkEyXkFqcGc@._V1_.jpg" alt="Free Guy">
+                <div class="movie-title">Free Guy</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="rat_desc.html">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/p_ratatouille_19736_0814231f.jpeg" alt="Ratatouille">
+                <div class="movie-title">Ratatouille</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="httyr_desc.html">
+                <img src="https://musicart.xboxlive.com/7/21dd0700-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080" alt="How To Train Your Dragon">
+                <div class="movie-title">How To Train Your Dragon</div>
+            </a>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="movie-item">
+            <a href="Puss_in_Boots_The_Last_Wish.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/66/Puss_in_Boots_The_Last_Wish_Poster.jpg" alt="Puss in Boots: The Last Wish">
+                <div class="movie-title">Puss in Boots: The Last Wish</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="halloween_2018_desc.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/24/Halloween_%282018%29_poster.jpg" alt="Halloween 2018">
+                <div class="movie-title">Halloween 2018</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="grown_ups_desc.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/92/Grown_Ups.jpg" alt="Grown Ups">
+                <div class="movie-title">Grown Ups</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="home_alone_desc.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/7/76/Home_Alone_poster.jpg" alt="Home Alone">
+                <div class="movie-title">Home Alone</div>
+            </a>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="movie-item">
+            <a href="venom_desc.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/7/7e/Venom_Let_There_Be_Carnage_poster.jpg" alt="Venom: Let There Be Carnage">
+                <div class="movie-title">Venom: Let There Be Carnage</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="nightmare_b_desc.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/The_nightmare_before_christmas_poster.jpg" alt="The Nightmare Before Christmas">
+                <div class="movie-title">The Nightmare Before Christmas</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="nimona_desc.html">
+                <img src="https://m.media-amazon.com/images/M/MV5BNzQ2MjQ0NGMtYWE4Zi00MDE5LTg0ODctZDYxNmI3N2U5N2E4XkEyXkFqcGdeQXVyNjQ4ODE3MDM@._V1_.jpg" alt="Nimona">
+                <div class="movie-title">Nimona</div>
+            </a>
+        </div>
+        <div class="movie-item">
+            <a href="migration_desc.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Migration_poster.jpg/220px-Migration_poster.jpg" alt="Migration">
+                <div class="movie-title">Migration</div>
+            </a>
+        </div>
     </div>
-    <script>
-        document.getElementById('hoverText').addEventListener('mousemove', (e) => {
-            const rect = e.target.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            e.target.style.setProperty('--x', `${x}px`);
-            e.target.style.setProperty('--y', `${y}px`);
-        });
-        document.getElementById('hoverText').addEventListener('mouseleave', (e) => {
-            e.target.style.setProperty('--x', '0px');
-            e.target.style.setProperty('--y', '0px');
-        });
-    </script>
 </body>
 </html>
+
