@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Posters</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #1a0000, #4b0000, #1a0000, #4b0000);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            font-family: Arial, sans-serif;
+        }
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .poster-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .poster-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Five_Nights_At_Freddy%27s_poster.jpeg" alt="Fnaf Movie">
+        <img src="https://m.media-amazon.com/images/M/MV5BN2I0MGMxYjUtZTZiMS00MzMxLTkzNWYtMDUyZmUwY2ViYTljXkEyXkFqcGc@._V1_.jpg" alt="Free Guy">
+        <img src="https://lumiere-a.akamaihd.net/v1/images/p_ratatouille_19736_0814231f.jpeg" alt="Ratatouille">
+        <img src="https://musicart.xboxlive.com/7/21dd0700-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080" alt="How To Train Your Dragon">
+    </div>
+</body>
+</html>
